@@ -54,8 +54,8 @@ header {
   width: 100%;
   height: 80px;
   background-color: #252831;
-  display: flex;
-  text-align:center;
+  display: block;
+  text-align: center;
 }
 header h1 {
   margin: auto;
@@ -68,9 +68,20 @@ header h1 a {
   text-transform: uppercase;
 }
 
-nav {
+.main-nav {
+  display: flex;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.details-nav {
   position: sticky;
   top: 80px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0;
 }
 
 #breadcrumb {
@@ -118,6 +129,7 @@ nav {
   padding: 10px 0;
   background-color: #3397DB;
   align-items: center;
+  text-align: center;
 }
 .filter-options h2 {
   color: white;
@@ -202,6 +214,9 @@ nav {
   position: sticky;
   top: 0;
   z-index: 5;
+}
+.inside header h1 {
+  padding-top: 18px;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
@@ -299,10 +314,6 @@ nav {
     top: 80px;
     z-index: 5;
   }
-
-  /* #breadcrumb {
-    
-  } */
 
   .inside #map-container {
     position: static;

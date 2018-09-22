@@ -208,8 +208,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-
-// Remove tabindex from links on map
-const mapLinks = document.getElementsByClassName("leaflet-control-attribution leaflet-control");
-
-mapLinks.tabIndex = "-1";
