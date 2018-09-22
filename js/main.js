@@ -75,7 +75,7 @@ initMap = () => {
   self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
         zoom: 12,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiamV0YWxzIiwiYSI6ImNqbWF5ZnQ4cTVhN2Izd2xpNHN3b3R2MDkifQ.yFJp5JU0G8CSAgYzz0rIfg',
@@ -209,3 +209,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+// Remove tabindex from links on map
+const mapLinks = document.getElementsByClassName("leaflet-control-attribution leaflet-control");
+
+mapLinks.tabIndex = "-1";
