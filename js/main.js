@@ -161,6 +161,14 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = `${restaurant.name} at ${restaurant.address}`;
+  /* Begin Attribution
+    Referenced the Project Five forum on Slack for adding alt text to images using JS interpolation at:
+    https://gwgnanodegrees.slack.com/archives/CB6CR41N1/p1537544376000100
+    based on Julian Johannesen's recommendation and then more from:
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+    on September 22, 2018
+  End Attribution */
   li.append(image);
 
   const name = document.createElement('h1');
