@@ -315,6 +315,11 @@ header h1 a {
     z-index: 5;
   }
 
+  .inside header {
+    display: flex;
+    padding-bottom: 20px;
+  }
+
   .inside #map-container {
     position: static;
     display: block;
