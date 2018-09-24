@@ -1,9 +1,10 @@
-const staticCacheName = 'rest-reviews-cache-v3';
+const staticCacheName = 'rest-reviews-cache-v6';
 
 // After registration, callback for install event should:
 // 1. open / create custom cache if it does not exist
 // 2. add page resources to cache by passing array into addAll()
 self.addEventListener('install', function(event) {
+    console.log("Service worker installed");
     event.waitUntil(
         caches.open(staticCacheName).then(function(cache) {
             return cache.addAll([
@@ -28,11 +29,30 @@ self.addEventListener('install', function(event) {
             ]);
         })
     );
+    console.log("Cache successful");
 });
+
+self.addEventListener('activate', function(event) {
+    console.log('Service worker activated');
+    event.waitUntil(
+      caches.keys().then(function(cacheNames) {
+        return Promise.all(
+          cacheNames.filter(function(cacheName) {
+            return cacheName.startsWith('rest-reviews') &&
+                   cacheName != staticCacheName;
+          }).map(function(cacheName) {
+            return cache.delete(cacheName);
+          })
+        );
+      })
+    );
+    console.log("Previous cache deleted");
+  });
 
 self.addEventListener('fetch', function(event) {
     // TODO: respond with an entry from the cache if there is one.
     // If there isn't, fetch from the network.
+    console.log("Service worker starting fetch");
     event.respondWith(
         caches.match(event.request).then(function(response) {
             // if match in cache exists, return response
@@ -74,12 +94,17 @@ self.addEventListener('fetch', function(event) {
                     // saving cloned response in cache
                     caches.open(staticCacheName).then(function(cache) {
                         cache.put(event.request, responseToCache);
+                        console.log("New data added to cache ", event.request.url);
                     });
 
                     return response;
                 }
-            )
             // End reference to helper code abstraction
+            // If any errors occur, catch and report them
+            ).catch(function(err) {
+                console.log("An error was encountered.")
+                console.error(err);
+            });
         })
     );
 });
