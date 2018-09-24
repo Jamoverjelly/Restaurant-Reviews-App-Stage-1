@@ -160,6 +160,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.setAttribute("tabindex", "0"); 
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = `${restaurant.name} at ${restaurant.address}`;
   /* Begin Attribution
@@ -170,17 +171,20 @@ createRestaurantHTML = (restaurant) => {
     on September 22, 2018
   End Attribution */
   li.append(image);
-
+  
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.setAttribute("tabindex", "0");
   li.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.setAttribute("tabindex", "0");
   li.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.setAttribute("tabindex", "0");
   li.append(address);
 
   const more = document.createElement('a');
@@ -216,17 +220,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-
-
-// register the service worker
-registerServiceWorker = function() {
-  if (!navigator.serviceWorker) return;
-  
-  navigator.serviceWorker.register('/js/sw.js').then(function() {
-    console.log('Registration worked!');
-  }).catch(function(err) {
-    console.log('Registration failed!');
-    console.error(err);
-  });
-};
-registerServiceWorker();

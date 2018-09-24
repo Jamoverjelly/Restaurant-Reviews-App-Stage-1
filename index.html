@@ -2,12 +2,14 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
     crossorigin="" />
+
   <title>Restaurant Reviews</title>
 </head>
 
@@ -29,21 +31,30 @@
 
   <main id="maincontent">
 
-    <section id="map-container">
-      <div id="map"></div>
+    <section role="application" id="map-container" aria-hidden="true" aria-labelledby="map-description">
+      <div role="application" id="map" aria-hidden="true" aria-labelledby="map-description"></div>
+      <label id="map-description" class="aria-label">interactive map</label>
     </section>
 
     <section>
       <div class="filter-options">
-        <h2>Filter Results</h2>
-        <select role="menu" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <h2 tabindex="0" aria-labelledby="filter-results">Filter Results</h2>
+        <label id="filter-results" class="aria-label">filter restaurants control</label>
+
+        <select role="menu" aria-labelledby="neighborhoods-label" id="neighborhoods-select" name="neighborhoods"
+          onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select role="menu" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <label id="neighborhoods-label" class="aria-label">filter results by neighborhood</label>
+
+        <select role="menu" aria-labelledby="cuisines-label" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
+        <label id="cuisines-label" class="aria-label">filter results by cuisine</label>
+
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul tabindex="0" aria-labelledby="restaurants-results" id="restaurants-list"></ul>
+      <label id="restaurants-results" class="aria-label">restaurant results</label>
     </section>
   </main>
 
@@ -51,12 +62,12 @@
     crossorigin=""></script>
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
+  <script type="application/javascript" charset="utf-8" src="js/register.js"></script>
 
-
-  <footer id="footer">
+  <footer id="footer" aria-labelledby="footer">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
+  <label id="footer" class="aria-label">copyright statement</label>
 
 </body>
 
