@@ -45,7 +45,7 @@
 
     <!-- Beginning map -->
     <section role="application" id="map-container" aria-hidden="true" aria-labelledby="map-description">
-      <div role="application" id="map" aria-hidden="true" aria-labelledby="map-description"></div>
+      <div role="application" tabindex="-1" id="map" aria-hidden="true" aria-labelledby="map-description"></div>
       <label id="map-description" class="aria-label">interactive map</label>
     </section>
     <!-- End map -->
@@ -67,7 +67,7 @@
     <!-- Beginning reviews -->
     <section id="reviews-container" tabindex="0" aria-labelledby="reviews">
       <label id="reviews" class="aria-label">restaurant reviews</label>
-      <ul id="reviews-list" tabindex="0" aria-labelledby="reviews_list"></ul>
+      <ul id="reviews-list" role="list" tabindex="0" aria-labelledby="reviews_list"></ul>
       <label id="reviews_list" class="aria-label">list of reviews</label>
     </section>
     <!-- End reviews -->

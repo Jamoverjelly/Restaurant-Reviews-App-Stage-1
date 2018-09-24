@@ -32,7 +32,7 @@
   <main id="maincontent">
 
     <section role="application" id="map-container" aria-hidden="true" aria-labelledby="map-description">
-      <div role="application" id="map" aria-hidden="true" aria-labelledby="map-description"></div>
+      <div role="application" tabindex="-1" id="map" aria-hidden="true" aria-labelledby="map-description"></div>
       <label id="map-description" class="aria-label">interactive map</label>
     </section>
 
@@ -53,7 +53,7 @@
         <label id="cuisines-label" class="aria-label">filter results by cuisine</label>
 
       </div>
-      <ul tabindex="0" aria-labelledby="restaurants-results" id="restaurants-list"></ul>
+      <ul role="list" tabindex="0" aria-labelledby="restaurants-results" id="restaurants-list"></ul>
       <label id="restaurants-results" class="aria-label">restaurant results</label>
     </section>
   </main>

@@ -1,3 +1,10 @@
+/* Begin Attribution
+    Referenced Matt Gaunt's article: Service Workers: an Introduction
+    for understanding where to register the service worker in this project:
+    https://developers.google.com/web/fundamentals/primers/service-workers/
+    on September 24, 2018
+End Attribution */
+
 // register the service worker when the page loads
 window.addEventListener('load', function() {
     if (!navigator.serviceWorker) return;
