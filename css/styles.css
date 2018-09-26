@@ -1,12 +1,31 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Start Reference to Helper Code */
+*, *:before, *:after {
+
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  
+}
+/* End Reference for Helper Code */
+
+/* Begin Attribution
+Posted issue with layout to r/CSS on Reddit and received advice
+for fixing it by setting universal box-sizing: border-box
+as this often works in responsive layouts from
+u/funkyjivemonkey here at 
+https://www.reddit.com/r/css/comments/9j3u9x/student_project_having_a_lot_of_difficulty/
+on September 26, 2018
+End Attribution */
+
+
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
   line-height: 1.5;
-  box-sizing: border-box;
 }
 body {
 	background-color: #fdfdfd;
@@ -57,10 +76,12 @@ header {
   display: block;
   text-align: center;
 }
-header h1 {
+header h1,
+header h2 {
   margin: auto;
 }
-header h1 a {
+header h1 a,
+header h2 a {
   color: #fff;
   font-size: 14pt;
   font-weight: 200;
@@ -158,8 +179,8 @@ header h1 a {
   padding: 30px 15px 60px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -180,7 +201,7 @@ header h1 a {
   min-height: 248px;
   min-width: 100%;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -215,7 +236,7 @@ header h1 a {
   top: 0;
   z-index: 5;
 }
-.inside header h1 {
+.inside header h2 {
   padding-top: 18px;
 }
 .inside #map-container {

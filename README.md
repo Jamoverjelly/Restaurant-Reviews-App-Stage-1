@@ -51,3 +51,5 @@ The requirements for the Restaurant Reviews project for Udacity's Front End Nano
 - Referenced the [Project Five forum on Slack for adding alt text to images using JS template literal syntax based on fellow student, Julian Johannesen's recommendation](https://gwgnanodegrees.slack.com/archives/CB6CR41N1/p1537544376000100) on September 22, 2018.
 
 - Referenced Matt Gaunt's article: [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/) for understanding where to register the service worker and how to manage resource caching and requests for this project on September 24, 2018.
+
+- [Posted issue with layout to r/CSS on Reddit](https://www.reddit.com/r/css/comments/9j3u9x/student_project_having_a_lot_of_difficulty/) and received advice for fixing it by setting universal box-sizing: border-box as this often works in responsive layouts from u/funkyjivemonkey on September 26, 2018
