@@ -1,5 +1,4 @@
 # Restaurant Reviews App
----
 
 ### Project Overview
 
@@ -8,8 +7,10 @@ The requirements for the Restaurant Reviews project for Udacity's Front End Nano
 
 ### Running The Project
 
-1. Clone the project's repository into a prepared directory on your local machine
-2. In the terminal, navigate to the project's directory.  From there, set up a simple HTTP server to host the project files.  This step can be carried out using Python as indicated in the project's original documentation:
+1. Clone the project's repository into a prepared directory on your local machine.
+
+2. In the terminal, navigate to the project's directory.  From there, set up a simple HTTP server to host the project files. This step can be carried out using Python as indicated in the project's original documentation:
+
 - Check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
 
 3. With the server running, visit the site at `http://localhost:8000`.
