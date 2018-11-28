@@ -7,7 +7,7 @@ The requirements for the Restaurant Reviews project for Udacity's Front End Nano
 ## Viewing The Project Online
 
 You can view a deployed version of my Restaurant Reviews application at the following address:
-http://jamoverjelly.github.io/Restaurant-Reviews-App-Stage-1/dist/index.html
+http://jamoverjelly.github.io/Restaurant-Reviews-App-Stage-1/
 
 ### Running The Project
 
