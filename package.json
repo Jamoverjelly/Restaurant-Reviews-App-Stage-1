@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Jamoverjelly/Restaurant-Reviews-App-Stage-1/issues"
   },
-  "homepage": "http://jamoverjelly.github.io/Restaurant-Reviews-App-Stage-1/dist/",
+  "homepage": "http://jamoverjelly.github.io/Restaurant-Reviews-App-Stage-1/dist/index.html",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "npm": "^6.4.1"
