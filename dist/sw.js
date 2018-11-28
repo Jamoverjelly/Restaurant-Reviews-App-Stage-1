@@ -8,24 +8,24 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(staticCacheName).then(function(cache) {
             return cache.addAll([
-                './',
-                './index.html',
-                './restaurant.html',
-                './css/styles.css',
-                './data/restaurants.json',
-                './js/dbhelper.js',
-                './js/main.js',
-                './js/restaurant_info.js',
-                './img/1.jpg',
-                './img/2.jpg',
-                './img/3.jpg',
-                './img/4.jpg',
-                './img/5.jpg',
-                './img/6.jpg',
-                './img/7.jpg',
-                './img/8.jpg',
-                './img/9.jpg',
-                './img/10.jpg'
+                'dist/',
+                'dist/index.html',
+                'dist/restaurant.html',
+                'dist/css/styles.css',
+                'dist/data/restaurants.json',
+                'dist/js/dbhelper.js',
+                'dist/js/main.js',
+                'dist/js/restaurant_info.js',
+                'dist/img/1.jpg',
+                'dist/img/2.jpg',
+                'dist/img/3.jpg',
+                'dist/img/4.jpg',
+                'dist/img/5.jpg',
+                'dist/img/6.jpg',
+                'dist/img/7.jpg',
+                'dist/img/8.jpg',
+                'dist/img/9.jpg',
+                'dist/img/10.jpg'
             ]);
         })
     );
