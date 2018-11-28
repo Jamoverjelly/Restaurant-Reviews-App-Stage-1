@@ -4,11 +4,6 @@
 
 The requirements for the Restaurant Reviews project for Udacity's Front End Nanodegree comprised of upgrading a static webpage's functionality on three key fronts to develop it into a mobile-ready web application. First, the page's starting CSS was modified making it responsive for users on mobile devices, then enhancements were made to the page's HTML and screen-reader testing was carried out to ensure the web page could be experienced by a wider range of users, finally, a service worker was added and tests were run verfying the page would still load under low-connectivity and offline scenarios.
 
-## Viewing The Project Online
-
-You can view a deployed version of my Restaurant Reviews application at the following address:
-http://jamoverjelly.github.io/Restaurant-Reviews-App-Stage-1/
-
 ### Running The Project
 
 1. Clone the project's repository into a prepared directory on your local machine.
