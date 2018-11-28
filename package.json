@@ -4,7 +4,7 @@
   "description": "Restaurant Reviews App for Udacity's FEND",
   "main": "index.html",
   "scripts": {
-    "deploy": "gh-pages -d ."
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
